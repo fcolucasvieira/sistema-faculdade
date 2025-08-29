@@ -2,10 +2,21 @@
 
 Este projeto consiste em um sistema desktop desenvolvido em Java para gerenciar dados acadêmicos de uma instituição de ensino superior. Ele contempla funcionalidades como cadastro de alunos, professores, disciplinas, turmas e consultas diversas.
 
-## 📁 Estrutura do projeto
+## 🧱 Arquitetura do sistema
 
-sistema-faculdade/ ├── src/ │ ├── acesso.dao/ │ ├── acesso.model/ │ ├── aluno.dao/ │ ├── aluno.model/ │ ├── curso.dao/ │ ├── curso.model/ │ ├── departamento.dao/ │ ├── departamento.model/ │ ├── disciplina.dao/ │ ├── disciplina.model/ │ ├── formacao.dao/ │ ├── formacao.model/ │ ├── professor.dao/ │ ├── professor.model/ │ ├── consultas.dao/ │ ├── utils/ │ └── tests/ ├── resources/ │ └── sql/ │ ├── Criar_BD.sql │ ├── Povoamento.sql │ └── Consultas.sql ├── docs/ │ └── Diagrama.mwb ├── .gitignore ├── README.md └── arquivos padrão do Eclipse (.project, .classpath)
+O sistema foi desenvolvido com foco em modularidade e separação de responsabilidades. Cada entidade do domínio (como Aluno, Professor, Curso, etc.) possui:
 
+- Um pacote de **modelos** (`.model`) que representa os dados
+- Um pacote de **acesso a dados** (`.dao`) que gerencia a persistência
+
+Além disso, o projeto inclui:
+
+- Pacote de **utilitários** para funções auxiliares
+- Pacote de **consultas** para lógica de busca e filtragem
+- Scripts SQL organizados em `recursos/sql`
+- Documentação visual do banco em `docs/Diagrama.mwb`
+
+Essa estrutura facilita a manutenção, testes e expansão futura do sistema.
 
 ## 🤝 Projeto colaborativo
 
@@ -35,6 +46,7 @@ Este sistema foi desenvolvido como parte de um projeto acadêmico colaborativo. 
 4. Compile e execute a classe principal
 
 ## 📌 Funcionalidades
+
 Cadastro e gerenciamento de alunos, professores, disciplinas e cursos
 
 Associação de turmas e formações
@@ -46,4 +58,5 @@ Organização modular por domínio
 Scripts de criação e povoamento do banco
 
 ## 📝 Licença
+
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.   
